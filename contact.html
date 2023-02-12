@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Silent Library</title>
+    <link rel="icon" href="./assets/img/logo.png" />
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+
+    <!-- initialization -->
+    <script type="module" src="./assets/js/initialize.js"></script>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Fontawesome icons -->
+    <script
+      src="https://kit.fontawesome.com/f761f426a2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CSS links -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+    <link rel="stylesheet" href="./assets/css/mediaqueries.css" />
+
+    <!-- JS scripts -->
+    <script defer src="./assets/js/contact.js"></script>
+  </head>
+  <body>
+    <header id="nav-bar-container"></header>
+    <main id="contact-page">
+      <header>
+        <h1>Ask us a question</h1>
+        <h2>
+          Any question about the upcoming events, suggestions, or just a simple
+          message to us, are all welcomed! Feel free to use the form.
+        </h2>
+      </header>
+      <section>
+        <section>
+          <form id="contact-form" novalidate>
+            <label>Contact Form</label>
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="First name"
+            />
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              placeholder="Last name"
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email address"
+            />
+            <select
+              title="subject"
+              class="input has-not-selected"
+              id="subject"
+              required
+            >
+              <option value="no-subject" selected disabled hidden>
+                What is your concern?
+              </option>
+              <option value="account">Account</option>
+              <option value="books">Books</option>
+              <option value="events">Events Inquiry</option>
+              <option value="other">Other</option>
+            </select>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Message"
+            ></textarea>
+            <button type="submit" class="button primary">Submit</button>
+          </form>
+        </section>
+        <section id="location">
+          <h3>Location</h3>
+          <div id="map_container">
+            <div id="googlemaps">
+              <iframe
+                title="location"
+                width="600"
+                height="350"
+                src="https://maps.google.com/maps?q=moa%20arena&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+              ></iframe>
+            </div>
+          </div>
+          <p>
+            Email:
+            <a href="#">contact@silentlibrary.com</a>
+          </p>
+          <p>
+            Contact Number:
+            <a href="#">+123-456-7890</a>
+          </p>
+        </section>
+      </section>
+    </main>
+    <div id="thank-you" title="Your message have been sent!">
+      <p>
+        Thank you for sending us a message. We will get back to you as soon as
+        possible!
+      </p>
+    </div>
+    <footer id="footer-container"></footer>
+  </body>
+</html>

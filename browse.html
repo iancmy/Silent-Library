@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Books | Silent Library</title>
+    <link rel="icon" href="./assets/img/logo.png" />
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- initialization -->
+    <script type="module" src="./assets/js/initialize.js"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Fontawesome icons -->
+    <script
+      src="https://kit.fontawesome.com/f761f426a2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CSS links -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/browse.css" />
+    <link rel="stylesheet" href="./assets/css/mediaqueries.css" />
+
+    <!-- JS scripts -->
+    <script defer type="module" src="./assets/js/browse.js"></script>
+  </head>
+  <body>
+    <header id="nav-bar-container"></header>
+    <main>
+      <!-- Browse query (i.e. Browse by buttons and Search) -->
+      <section id="browse-query">
+        <h2>Browse by:</h2>
+        <div id="browse-nav">
+          <div id="sort-buttons">
+            <button type="button" class="button anchor" id="bytitle">
+              Title
+            </button>
+            <button type="button" class="button anchor" id="byauthor">
+              Author
+            </button>
+            <select title="genre" class="button anchor" id="bygenre">
+              <option value="" selected hidden disabled>Genre</option>
+              <option value="fantasy">Fiction - Fantasy</option>
+              <option value="scifi">Fiction - Science Fiction</option>
+              <option value="action&adventure">
+                Fiction - Action & Adventure
+              </option>
+              <option value="mystery">Fiction - Mystery</option>
+              <option value="horror">Fiction - Horror</option>
+              <option value="romance">Fiction - Romance</option>
+              <option value="graphicnovel">Fiction - Graphic Novel</option>
+              <option value="shortstory">Fiction - Short Story</option>
+              <option value="art&photog">Nonfiction - Art & Photography</option>
+              <option value="selfhelp">Nonfiction - Self-help</option>
+              <option value="history">Nonfiction - History</option>
+              <option value="science&tech">
+                Nonfiction - Science & Technology
+              </option>
+              <option value="essays">Nonfiction - Essays</option>
+              <option value="children">Children's Books</option>
+            </select>
+            <button type="button" class="button anchor" id="trending">
+              Trending
+            </button>
+            <button type="button" class="button anchor" id="recommendations">
+              Recommendations
+            </button>
+          </div>
+          <div>
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search Books"
+            />
+          </div>
+        </div>
+        <hr />
+      </section>
+      <!-- Browse results -> shows results of browse query -->
+      <section id="browse-results"></section>
+    </main>
+    <footer id="footer-container"></footer>
+  </body>
+</html>
