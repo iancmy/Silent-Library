@@ -1,0 +1,102 @@
+#events > * {
+  margin: 1rem 0;
+}
+
+#events header > div {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+#events header h2,
+#promotions header h2 {
+  flex: 1 1;
+  font-weight: 700;
+}
+
+.events-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.events-container .event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.event img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+#event-info {
+  text-align: center;
+  padding: 1rem;
+}
+
+#event-info > * {
+  margin-bottom: 0.6rem;
+}
+
+#event-info > h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+#event-info > p {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+#details > * {
+  margin-bottom: 0.6rem;
+}
+
+.detail p {
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.detail span {
+  padding-right: 0.3rem;
+  transform: translateY(0.25rem);
+}
+
+#promotions header {
+  margin-bottom: 1.5rem;
+}
+
+#promotions header > * {
+  margin-bottom: 0.25rem;
+}
+
+#promotions > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.promotion {
+  padding: 1rem;
+}
+
+.promotion > * {
+  margin: 0.5rem 0;
+}
+
+.promotion h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.promotion p {
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+
+.promotion button {
+  font-weight: 300;
+}

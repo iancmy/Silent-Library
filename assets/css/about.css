@@ -1,0 +1,91 @@
+#logo-and-slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo-and-slogan h2 {
+  font-size: 1.75rem;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+#mission-vision {
+  background-color: rgb(var(--bg-color));
+  padding-block: 2rem;
+}
+
+#mission-vision article {
+  margin: 3rem 0;
+}
+
+#mission-vision article > * {
+  margin: 1rem 0;
+}
+
+#mission-vision article h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+#mission-vision article p,
+#mission-vision article a {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+#history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#history > * {
+  margin: 0.5rem 0;
+}
+
+#history h3 {
+  width: 75%;
+  font-size: 1rem;
+}
+
+#timeline {
+  position: relative;
+  display: flex;
+  width: 100vw;
+}
+
+#timeline::before {
+  content: "";
+  top: 42.5%;
+  left: 50%;
+  width: 100vw;
+  height: 0rem;
+  position: absolute;
+  transform: translate(-50%, -42.5%);
+  border: 1px solid black;
+  z-index: -1;
+}
+
+.year-container {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw / 6);
+  margin: 0 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.year-container > * {
+  margin: 0.25rem 0;
+}
+
+.year-container img {
+  width: 100%;
+}
+
+.year-container p {
+  font-size: 0.75rem;
+}

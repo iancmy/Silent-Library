@@ -1,0 +1,42 @@
+main h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0 3rem;
+  margin: 2rem 0 0.25rem;
+}
+
+main hr {
+  margin: 0 3rem;
+}
+
+#sitemap-items {
+  padding: 1rem 4rem;
+}
+
+.page-root {
+  display: flex;
+  height: 25rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.page-root > li {
+  margin-bottom: 0.2rem;
+}
+
+.page-root > li > a {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.page-item li * {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.page-item.t1,
+.page-item.t2,
+.page-item.t3 {
+  margin-left: 2rem;
+  list-style: disc;
+}

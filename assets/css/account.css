@@ -1,0 +1,208 @@
+section > * {
+  margin: 1rem 0;
+}
+
+section header {
+  position: sticky;
+}
+
+header h2 {
+  font-weight: 700;
+}
+
+div.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  color: rgb(var(--dark-bg-color));
+  text-align: center;
+}
+
+div.book-container,
+div.wishlist-container {
+  height: 15vw;
+  display: flex;
+  align-items: center;
+  padding: 0.4rem;
+  margin: 0.25rem 0;
+  border: 1px solid rgb(var(--dark-bg-color));
+  border-radius: 0.25rem;
+}
+
+div.book-container > *,
+div.wishlist-container > * {
+  display: flex;
+  align-items: center;
+}
+
+div.book-container > div,
+div.wishlist-container > div {
+  height: 100%;
+  flex: 1 1;
+}
+
+div.book-container > div > *,
+div.wishlist-container > div > * {
+  margin: 0 0.15rem;
+}
+
+div.book-container > div > img,
+div.wishlist-container > div > img {
+  height: 100%;
+  aspect-ratio: 9 / 12;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+div.book-container > div > div,
+div.wishlist-container > div > div {
+  flex: 1 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 0.15rem;
+}
+
+div.book-container > div > div h2,
+div.wishlist-container > div > div h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+div.book-container > div > div h3,
+div.wishlist-container > div > div h3 {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+div.book-container > div > div p,
+div.wishlist-container > div > div p {
+  font-size: 0.8rem;
+}
+
+div.book-container > div > div > div,
+div.wishlist-container > div > div > div {
+  height: 80%;
+  overflow: hidden;
+}
+
+div.book-container > div > div > button,
+div.wishlist-container > div > div > button {
+  height: 20%;
+}
+
+#users .container {
+  position: relative;
+  padding: 0 0.25rem;
+}
+
+#users header > div {
+  display: flex;
+  align-items: center;
+}
+
+#users header > div > h2 {
+  flex: 1 1;
+}
+
+form label {
+  color: rgb(var(--primary-color));
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+
+.header {
+  position: relative;
+  color: rgb(var(--primary-color));
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.25rem;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.header > p {
+  font-size: 0.9rem;
+}
+
+.user {
+  position: relative;
+  border: 1px solid rgb(var(--primary-color));
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+}
+
+.user-info {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.25rem;
+  text-align: left;
+}
+
+.user-info > p {
+  font-size: 0.8rem;
+}
+
+.crud-buttons {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  font-size: 0.8rem;
+  transform: translateY(-50%);
+  transition: all 250ms ease-in-out;
+}
+
+.crud-buttons > li > a {
+  text-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.user:hover .crud-buttons {
+  opacity: 100;
+}
+
+.user:hover .user-info {
+  filter: blur(1px);
+}
+
+#edit-popup,
+#delete-popup,
+#new-popup {
+  display: none;
+  position: fixed;
+  width: 30%;
+  top: 50%;
+  left: 50%;
+  flex-direction: column;
+  gap: 0.25rem;
+  background-color: rgb(var(--bg-color));
+  padding: 1rem;
+  border: 1px solid rgb(var(--primary-color));
+  border-radius: 0.25rem;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.1);
+  transition: all 250ms ease-in-out;
+  z-index: 1;
+}
+
+#edit-popup div {
+  display: flex;
+  gap: 0.25rem;
+  justify-content: center;
+}
+
+#edit-popup div > * {
+  flex: 1 1;
+}

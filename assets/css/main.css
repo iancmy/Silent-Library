@@ -1,0 +1,367 @@
+:root {
+  --primary-color: 25, 160, 250;
+  --secondary-color: 19, 127, 198;
+  --bg-color: 245, 245, 245;
+  --dark-bg-color: 145, 145, 145;
+  --danger-color: 220, 53, 69;
+  --danger-hover-color: 143, 34, 45;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  scroll-behavior: smooth; /* not available to Safari IOS < 15.4 */
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  padding-top: 3rem;
+}
+
+main > section {
+  padding: 0 3rem;
+  margin-bottom: 4rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.warning {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: orange;
+  margin-left: 0.5rem;
+  animation: 2s ease-out 1s 1 fade-out forwards;
+}
+
+a,
+button,
+select {
+  text-decoration: none;
+  font-weight: 500;
+  color: rgb(var(--primary-color));
+  transition: all 250ms ease-in-out;
+}
+
+a:hover,
+a.active-link {
+  color: rgb(var(--secondary-color));
+}
+
+a.button {
+  padding: 0.25rem 1.5rem;
+  border: 1px solid rgb(var(--primary-color));
+  border-radius: 0.25rem;
+}
+
+a.button:hover,
+a.button.active-link,
+button.button:hover,
+select.button:hover {
+  border-color: rgb(var(--secondary-color));
+  background-color: rgb(var(--bg-color));
+}
+
+a.button.primary,
+button.button.toggled,
+button.button.primary,
+select.button.toggled {
+  color: white;
+  background-color: rgb(var(--primary-color));
+}
+
+a.button.primary:hover,
+a.button.primary.active-link,
+button.button.toggled:hover,
+button.button.primary:hover,
+select.button.toggled:hover {
+  border-color: rgb(var(--secondary-color));
+  background-color: rgb(var(--secondary-color));
+}
+
+.danger {
+  color: rgb(var(--danger-color));
+}
+
+.danger:hover {
+  color: rgb(var(--danger-hover-color));
+}
+
+.button.danger {
+  color: white;
+  background-color: rgb(var(--danger-color));
+  border-color: rgb(var(--danger-color));
+}
+
+.button.danger:hover,
+.button.danger.active-link {
+  border-color: rgba(var(--danger-hover-color), 0.5);
+  background-color: rgb(var(--danger-hover-color));
+}
+
+button.button.toggled {
+  pointer-events: none;
+}
+
+button.button.disabled {
+  color: gray;
+  border-color: rgb(var(--bg-color));
+  background-color: rgb(var(--bg-color));
+  cursor: not-allowed;
+}
+
+button.button.disabled:hover {
+  cursor: not-allowed;
+}
+
+button.button,
+select.button {
+  height: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  background: none;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid rgb(var(--primary-color));
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button.button:active,
+select.button:active {
+  border-color: rgb(var(--secondary-color));
+  background-color: rgb(var(--bg-color));
+}
+
+option {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  height: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75rem;
+  padding-left: 0.5rem;
+  border: 1px solid rgb(var(--primary-color));
+  border-radius: 0.25rem;
+}
+
+textarea {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  border: 1px solid rgb(var(--primary-color));
+  border-radius: 0.25rem;
+  resize: none;
+}
+
+select.input {
+  color: rgb(61, 61, 61);
+  height: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  padding-left: 0.3rem;
+  border: 1px solid rgb(var(--primary-color));
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+select.input > option {
+  color: black;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgb(var(--dark-bg-color));
+}
+
+select.input:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  outline: 1px solid rgb(var(--primary-color));
+}
+
+hr.full-width {
+  width: 100vw;
+  height: 2px;
+}
+
+/* anchor tag offset */
+.anchor::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 0;
+  height: 4rem;
+  margin-top: -4rem;
+}
+
+/* hide mobile elements */
+.mobile {
+  display: none;
+}
+
+/* Nav and footer CSS */
+#nav-bar-container {
+  background-color: white;
+  position: fixed;
+  width: 100vw;
+  height: 3rem;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+#nav-bar-container > nav,
+#footer-container > div {
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+#footer-container > div {
+  flex-direction: column;
+}
+
+#footer-container > div > * {
+  margin: 0.5rem 0;
+}
+
+a.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+li.link {
+  list-style: none;
+  margin: 0 0.75rem;
+}
+
+/* Navigation CSS */
+a.logo img#nav-logo {
+  margin-block: 0.25rem;
+  margin-right: 1.5rem;
+}
+
+#nav-links,
+#nav-buttons {
+  display: flex;
+  align-items: center;
+}
+
+#nav-links {
+  flex: 1 1;
+}
+
+li.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+ul.dropdown-menu {
+  position: absolute;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.4);
+  transition: all 0.25s ease-in-out;
+}
+
+li.dropdown:hover ul.dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+ul.dropdown-menu li {
+  margin: 0.4rem;
+}
+
+li.account {
+  display: none;
+}
+
+/* Footer CSS */
+#footer-container {
+  width: 95vw;
+}
+
+#footer-container hr {
+  width: 100%;
+}
+
+div:has(ul.footer-links) {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.75rem 0;
+}
+
+ul.footer-links {
+  display: flex;
+  gap: 3rem;
+}
+
+ul#socmed-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul#socmed-links img {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+p#copyright {
+  font-size: 0.6rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
